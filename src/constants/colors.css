@@ -1,0 +1,9 @@
+body {
+  --primary: rgb(0, 0, 0);
+  --secondary: #e6246e;
+  --primary-light: #4b3b2b;
+  --primary-dark: #0e0c0b;
+  --secondary-light: #dbc89f;
+  --secondary-dark: #79653b;
+  --accent: #ffbc00; 
+}

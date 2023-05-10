@@ -1,0 +1,23 @@
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  margin-left: 0.1rem;
+  min-width: 0;
+  object-fit: contain;
+}
+
+.embla__slide img {
+  height: 260px;
+}
+
+@media screen and (max-width: 480px) {
+  .embla__slide img {
+    height: 160px;
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,23 @@
+.background {
+  position: relative;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.bg_img {
+  transform: translateZ(-10px) scale(2);
+}
+
+.bg_img {
+  position: absolute;
+  /* top: 4rem; */
+  /* left: 0; */
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}

@@ -1,0 +1,39 @@
+.contact {
+  display: flex;
+  margin: 1rem auto;
+}
+
+.contact_left {
+  flex: 1;
+}
+
+.contact_info_item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  font-weight: 300;
+  gap: 5px;
+}
+
+.contact_info_item h5 {
+  margin: 0.5rem 0;
+}
+
+.contact_right {
+  flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+  }
+  .contact_right {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contact_title {
+    font-size: 1.5rem;
+  }
+}

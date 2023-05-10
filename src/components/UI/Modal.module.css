@@ -1,0 +1,40 @@
+.modal {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 400;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px #ccc;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  width: 60%;
+  height: 80vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  left: 20%;
+  transition: all 0.4s ease-in-out;
+  animation: slide-down 400ms ease-out forwards;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .modal {
+    width: 84%;
+    left: 8%;
+  }
+}
+

@@ -1,0 +1,107 @@
+.contact {
+  margin-top: 1rem;
+}
+
+.contact_full .contact_desc,
+.contact .contact_desc {
+  font-weight: 200;
+  font-size: 1.2rem;
+}
+
+.contact_full form,
+.contact form {
+  margin-top: 20px;
+}
+
+.contact_full input,
+.contact input {
+  height: 40px;
+  border: none;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 10px 0;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.contact input {
+  width: 60%;
+}
+.contact_full input {
+  width: 90%;
+}
+
+.contact_full textarea,
+.contact textarea {
+  margin: 10px 0;
+  padding: 8px 0;
+  font-size: 14px;
+  padding-left: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.contact textarea {
+  width: 60%;
+}
+.contact_full textarea {
+  width: 90%;
+}
+
+.contact_full input:focus,
+.contact input:focus {
+  outline: none;
+  border: 1px solid var(--secondary);
+}
+
+.contact_full input:focus::placeholder,
+.contact input:focus::placeholder {
+  font-size: 10px;
+  transform: translateY(-15px);
+  transition: all 0.6s ease-in;
+}
+
+.contact_full textarea:focus,
+.contact textarea:focus {
+  outline: none;
+  border: 1px solid var(--secondary);
+}
+
+.thank {
+  margin-top: 1rem;
+  font-weight: 250;
+}
+
+@media screen and (max-width: 768px) {
+  .contact .contact_desc {
+    font-weight: 200;
+    font-size: 1.1rem;
+    margin: 0.5rem 2rem;
+  }
+  .contact_full input,
+  .contact_full textarea {
+    width: 100%;
+  }
+  .contact input,
+  .contact textarea {
+    width: 80%;
+  }
+}
+
+.contact form button {
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 480px) {
+  .contact .contact_desc {
+    font-weight: 200;
+    font-size: 0.9rem;
+    margin: 0.5rem 2rem;
+  }
+  .contact input {
+    height: 34px;
+  }
+  .contact_full .contact_desc {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,48 @@
+.delivery {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.icon_container {
+  height: 100px;
+  width: 100px;
+  background-color: var(--secondary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.delivery_column {
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.delivery_column p {
+  text-align: center;
+}
+
+.icon_container svg {
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.conditions {
+  margin-top: 4rem;
+}
+
+.conditions p {
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 768px) {
+  .delivery {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+}

@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useContext} from 'react';
+import {Switch, Route} from 'react-router-dom';
+
+import { Context } from './store/context';
+
+import MobileNavBar from './components/Navigation/MobileNavBar';
+import NavBar from './components/Navigation/NavBar';
+import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import PricePage from './pages/PricePage';
+import OrderPage from './pages/OrderPage';
+import ContactPage from './pages/ContactPage';
+import GalleryPage from './pages/GalleryPage';
+// import Background from './components/UI/Background';
+
 
 function App() {
+  const ctx = useContext(Context);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    {/* <Background> */}
+    {ctx.isMobileDevice ? <MobileNavBar /> : <NavBar />}
+    <Switch>
+      <Route path="/" exact  component={HomePage} />
+      <Route path="/order" component={OrderPage} />
+      <Route path="/price" component={PricePage} />
+      <Route path="/contact" component={ContactPage} />
+      <Route path="/gallery" component={GalleryPage} />
+    </Switch>
+    {/* <Background /> */}
+    <Footer />
+    {/* </Background> */}
+    </>
   );
 }
 
