@@ -110,6 +110,13 @@
   margin: 2rem auto;
 }
 
+.thank {
+  text-align: center;
+  color: var(--secondary);
+  margin-top: 1.5rem;
+  font-weight: 250;
+}
+
 
 @media screen and (max-width: 600px) {
   .break {

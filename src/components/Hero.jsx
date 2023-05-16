@@ -1,7 +1,11 @@
 import React, {useState} from 'react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faTruckFast, faThumbsUp, faEuroSign, faRepublican} from "@fortawesome/free-solid-svg-icons";
 import {EmblaCarousel} from './UI/EmblaCarousel';
+
 import Modal from './UI/Modal';
+import Card from './UI/Card'; 
 import Backdrop from './UI/Backdrop';
 import Button from './UI/Button';
 import ContactForm from './ContactForm';
@@ -39,6 +43,45 @@ const Hero = () => {
         </div>
       </div>
     </div>
+    <Card>
+        <div className={classes.summary_container}>
+          <div className={classes.summary}>
+            <div className={classes.summary_column}>
+              <div className={classes.icon_container}>
+              {/* <FontAwesomeIcon icon={faRectanglePro} /> */}
+              <FontAwesomeIcon icon={faRepublican} />
+              </div>
+              <p>
+              Profesionali konsultacija ir patarimai
+              </p>
+            </div>
+            <div className={classes.summary_column}>
+              <div className={classes.icon_container}>
+              <FontAwesomeIcon icon={faThumbsUp} />
+              </div>
+              <p>
+              Siūlome tik kokybiškus gaminius
+              </p>
+            </div>
+            <div className={classes.summary_column}>
+              <div className={classes.icon_container}>
+              <FontAwesomeIcon icon={faEuroSign} />
+              </div>
+              <p>
+              Draugiškos kainos
+              </p>
+            </div>
+            <div className={classes.summary_column}>
+              <div className={classes.icon_container}>
+              <FontAwesomeIcon icon={faTruckFast} />
+              </div>
+              <p>
+              Greitas pagaminimas ir pristatymas
+              </p>
+            </div>
+          </div>
+        </div>
+      </Card>
     </>
   );
 };
