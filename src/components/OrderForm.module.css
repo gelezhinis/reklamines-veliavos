@@ -118,12 +118,20 @@
 }
 
 
+@media screen and (max-width: 820px) {
+  .input_element div:nth-child(3) p {
+    transform: translate(20px, 20px);
+    text-align: left;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .break {
     display: block;
   }
   .input_element div:nth-child(3) p {
     transform: translate(20px, 14px);
+    text-align: left;
   }
 }
 

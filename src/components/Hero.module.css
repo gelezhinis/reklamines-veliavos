@@ -149,6 +149,16 @@
   .hero_desc {
     width: 90%;
   }
+  .summary {
+    flex-direction: column;
+    align-items: center;
+  }
+  .summary_column {
+    margin-bottom: 1.5rem;
+  }
+  .icon_container {
+    margin-bottom: 0.5rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -163,6 +173,16 @@
 @media screen and (max-width: 414px) {
   .hero {
     gap: 0rem;
+    margin-top: -2rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .hero_container {
+    height: 680px;
+  }
+  .hero_desc {
+    margin-top: -2rem;
   }
 }
 
