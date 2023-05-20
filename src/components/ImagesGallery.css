@@ -55,16 +55,23 @@
 .model img {
   width: auto;
   max-width: 100%;
-  height: 92vh;
+  /* height: 92vh; */
   max-height: 100%;
   display: block;
   margin: 0 auto;
 }
 
 .model.open {
+  width: 100%;
+  height: 100%;
   visibility: visible;
   opacity: 1;
   transform: scale(1);
+}
+
+.model.open img {
+  position: fixed;
+  margin-top: -3.5rem;
 }
 
 .model.open svg {

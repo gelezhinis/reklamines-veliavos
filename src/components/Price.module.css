@@ -103,7 +103,7 @@
 
 @keyframes slide-from-right {
   from {
-    transform: translateX(8rem);
+    transform: translateX(-4rem);
   }
   to {
     transform: translateX(0);
@@ -116,7 +116,7 @@
 
 @keyframes slide-from-left {
   from {
-    transform: translateX(-8rem);
+    transform: translateX(4rem);
   }
   to {
     transform: translateX(0);
