@@ -172,8 +172,16 @@
 
 @media screen and (max-width: 414px) {
   .hero {
+    width: 96%;
     gap: 0rem;
     margin-top: -2rem;
+  }
+  .hero_carousel,
+  .hero_desc {
+    width: 96%;
+  }
+  .hero_desc p {
+    margin-bottom: 1.5rem;
   }
 }
 

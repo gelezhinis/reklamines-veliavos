@@ -82,3 +82,12 @@
 .toggler:checked:hover + .hamburger > div {
   transform: rotate(225deg);
 }
+
+@media screen and (max-width: 414px) {
+  .mobile_nav_container {
+    padding: 0 0 0 1rem;
+  }
+  .hamburger_wrap {
+    right: 0.2rem;
+  }
+}
