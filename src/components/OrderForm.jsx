@@ -1,5 +1,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { storage } from '../firebase/firebaseConfig';
+import { ref, uploadBytes } from 'firebase/storage';
 
 import Button from './UI/Button';
 
@@ -17,125 +19,72 @@ const OrderForm = (props) => {
   const [companyInfo, setCompanyInfo] = useState('');
   const [orderDetails, setOrderDetails] = useState('');
   const [noPvm, setNoPvm] = useState(false);
-  const [maketFile, setMaketFile] = useState(null);
+  const [maketFiles, setMaketFiles] = useState([]);
   const [freeMaket, setFreeMaket] = useState(false);
+
+  const fileSelectHandler = (event) => {
+    for (let i = 0; i < event.target.files.length; i++) {
+      const newImage = event.target.files[i];
+      setMaketFiles((prevState) => [...prevState, newImage]);
+    }
+
+  };
+
+  const uploadFiles = () => {
+    if (!maketFiles) {
+      return;
+    }
+    maketFiles.map((mFile) => {
+      const fileRef = ref(storage, `files/${email}/${mFile.name}`);
+      uploadBytes(fileRef, mFile)
+        .then(() => {
+          console.log('Uploaded!');
+        })
+        .catch((err) => console.log(err.message));
+    });
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    console.log('PROPS', props.closeModal);
-
-    if (maketFile) {
-      const reader = new FileReader();
-      reader.readAsDataURL(maketFile);
-
-      reader.onload = async (e) => {
-        const emailParams = {
-          email: email,
-          flag: subject,
-          accessories: accessories,
-          company_info: companyInfo,
-          order_details: orderDetails,
-          no_pvm: noPvm ? 'taip' : 'ne',
-          free_maket: freeMaket ? 'reikia' : 'nereikia',
-          maket_file: reader.result,
-        };
-
-        emailjs
-          .send(
-            process.env.REACT_APP_EMAIL_JS_SERVICE_ID,
-            process.env.REACT_APP_EMAIL_JS_ORDER_TEMPLATE_ID,
-            emailParams,
-            process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY
-          )
-          .then((result) => {
-            console.log(result.text);
-            setDone(true);
-            setSubject('');
-            setAccessories('');
-            setEmail('');
-            setCompanyInfo('');
-            setOrderDetails('');
-            setNoPvm(false);
-            setMaketFile(null);
-            setFreeMaket(false);
-          })
-          .catch((error) => {
-            console.log(error.text);
-          });
-      };
-    } else {
-      const emailParams = {
-        email: email,
-        flag: subject,
-        accessories: accessories,
-        company_info: companyInfo,
-        order_details: orderDetails,
-        no_pvm: noPvm ? 'taip' : 'ne',
-        free_maket: freeMaket ? 'reikia' : 'nereikia',
-      };
-
-      emailjs
-        .send(
-          process.env.REACT_APP_EMAIL_JS_SERVICE_ID,
-          process.env.REACT_APP_EMAIL_JS_ORDER_TEMPLATE_ID,
-          emailParams,
-          process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY
-        )
-        .then((result) => {
-          console.log(result.text);
-          setDone(true);
-          setSubject('');
-          setAccessories('');
-          setEmail('');
-          setCompanyInfo('');
-          setOrderDetails('');
-          setNoPvm(false);
-          setMaketFile(null);
-          setFreeMaket(false);
-        })
-        .catch((error) => {
-          console.log(error.text);
-        });
+    if (maketFiles) {
+      uploadFiles();
     }
 
-    // const reader = new FileReader();
-    // reader.readAsDataURL(maketFile);
+    const emailParams = {
+      email: email,
+      flag: subject,
+      accessories: accessories,
+      company_info: companyInfo,
+      order_details: orderDetails,
+      no_pvm: noPvm ? 'taip' : 'ne',
+      free_maket: freeMaket ? 'reikia' : 'nereikia',
+    };
 
-    // reader.onload = async (e) => {
-    //   const emailParams = {
-    //     email: email,
-    //     flag: subject,
-    //     accessories: accessories,
-    //     company_info: companyInfo,
-    //     order_details: orderDetails,
-    //     no_pvm: noPvm ? 'taip' : 'ne',
-    //     free_maket: freeMaket ? 'reikia' : 'nereikia',
-    //     maket_file: reader.result,
-    //   };
-
-    //   emailjs
-    //     .send(
-    //       process.env.REACT_APP_EMAIL_JS_SERVICE_ID,
-    //       process.env.REACT_APP_EMAIL_JS_ORDER_TEMPLATE_ID,
-    //       emailParams,
-    //       process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY
-    //     )
-    //     .then((result) => {
-    //       console.log(result.text);
-    //       setDone(true);
-    //       setSubject('');
-    //       setAccessories('');
-    //       setEmail('');
-    //       setCompanyInfo('');
-    //       setOrderDetails('');
-    //       setNoPvm(false);
-    //       setMaketFile(null);
-    //       setFreeMaket(false);
-    //     })
-    //     .catch((error) => {
-    //       console.log(error.text);
-    //     });
+    emailjs
+      .send(
+        process.env.REACT_APP_EMAIL_JS_SERVICE_ID,
+        process.env.REACT_APP_EMAIL_JS_ORDER_TEMPLATE_ID,
+        emailParams,
+        process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY
+      )
+      .then((result) => {
+        console.log(result.text);
+        setDone(true);
+        setSubject('');
+        setCompany(false);
+        setAccessories('');
+        setEmail('');
+        setCompanyInfo('');
+        setOrderDetails('');
+        setNoPvm(false);
+        setModel(false);
+        setMaketFiles([]);
+        setFreeMaket(false);
+      })
+      .catch((error) => {
+        console.log(error.text);
+      });
 
     if (props.closeModal) {
       window.scroll(0, 100);
@@ -260,7 +209,7 @@ const OrderForm = (props) => {
                 multiple
                 accept="*"
                 required
-                onChange={(e) => setMaketFile(e.target.files[0])}
+                onChange={fileSelectHandler}
               />
             </div>
           )}
@@ -275,9 +224,13 @@ const OrderForm = (props) => {
             <p>Norėsime NEMOKAMO* maketo</p>
           </div>
         </div>
-        {(done && props.closeModal) && <p className={classes.thank}>Jūsų užsakymas jau vykdomas.</p>}
+        {done && props.closeModal && (
+          <p className={classes.thank}>Jūsų užsakymas jau vykdomas.</p>
+        )}
         <Button title="Siųsti" />
-        {(done && !props.closeModal) && <p className={classes.thank}>Jūsų užsakymas jau vykdomas.</p>}
+        {done && !props.closeModal && (
+          <p className={classes.thank}>Jūsų užsakymas jau vykdomas.</p>
+        )}
       </form>
     </div>
   );

@@ -181,6 +181,9 @@
   .price_desc p {
     margin-bottom: 1rem;
   }
+  .price_desc button {
+    margin-top: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
