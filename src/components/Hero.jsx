@@ -33,7 +33,7 @@ const Hero = () => {
           <EmblaCarousel />
         </div>
         <div className={classes.hero_desc}>
-          <h3>Reklaminės Vėliavos</h3>
+          <h1>Reklaminės Vėliavos</h1>
           <p>
           Tai vėliavos kurios puikiai tinka įvairaus verslo, prekės ženklo ar bet kokio renginio reklamai. Reklaminės vėliavos gali būti naudojamos ne tik lauke įvairiais metų laikais, bet ir viduje, o lyginant su kitomis reklamos formomis jos turi nemažai privalumų, todėl yra populiarus pasirinkimas.
           Didžiuojamės, kad mūsų gaminamos Reklaminės vėliavos džiugina ne tik Lietuvos, bet ir kitų europos valstybių klientus.

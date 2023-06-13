@@ -35,8 +35,9 @@
   justify-content: space-between;
 }
 
-.hero_desc h3 {
+.hero_desc h1 {
   color: #fff;
+  text-align: center;
   transition: all 0.9s ease-in-out;
   animation: slide-down 0.9s ease-in-out forwards;
 }

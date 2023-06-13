@@ -1,0 +1,5 @@
+https://veliavos.netlify.app/
+https://veliavos.netlify.app/price
+https://veliavos.netlify.app/gallery
+https://veliavos.netlify.app/contact
+https://veliavos.netlify.app/order
