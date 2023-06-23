@@ -31,7 +31,7 @@ const MuiAccordion = () => {
     <>
     <Card>
       <div className={classes.title}>
-        <h3>Pas mus rasite įvairių dydžių ir formų reklaminių vėliavų</h3>
+        <h2>Pas mus rasite įvairių dydžių ir formų reklaminių vėliavų</h2>
         <p>Reklamines vėliavas siūlome rinktis iš 4-ių skirtingų dydžių - S, M, L ir XL bei 5-ių skirtingų formų - Convex, Straight, Angled, Concave ir Drop. Drop formos vėliava yra žemesnė nei visos kitos formos.</p>
       </div>
       <div className={classes.accordion}>
