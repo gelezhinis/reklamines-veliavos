@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { storage } from '../firebase/firebaseConfig';
-import { ref, uploadBytes } from 'firebase/storage';
+import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
 import Button from './UI/Button';
 
@@ -27,28 +27,63 @@ const OrderForm = (props) => {
       const newImage = event.target.files[i];
       setMaketFiles((prevState) => [...prevState, newImage]);
     }
-
   };
 
-  const uploadFiles = () => {
+  let downloads = [];
+
+  const uploadFiles = async () => {
     if (!maketFiles) {
       return;
     }
-    maketFiles.map((mFile) => {
+  
+    for (let i = 0; i < maketFiles.length; i++) {
+      const mFile = maketFiles[i];
       const fileRef = ref(storage, `files/${email}/${mFile.name}`);
-      uploadBytes(fileRef, mFile)
-        .then(() => {
-          console.log('Uploaded!');
-        })
-        .catch((err) => console.log(err.message));
-    });
+  
+      try {
+        const snapshot = await uploadBytesResumable(fileRef, mFile);
+        const downloadURL = await getDownloadURL(snapshot.ref);
+        downloads.push(downloadURL);
+        console.log('Uploaded:', mFile.name);
+      } catch (err) {
+        console.log('Upload error:', err.message);
+      }
+    }
+    // console.log('Downloads:', downloads);
   };
 
-  const handleSubmit = (event) => {
+  // const uploadFiles = async () => {
+  //   let downloads = [];
+  //   if (!maketFiles) {
+  //     return;
+  //   }
+  //   maketFiles.map((mFile) => {
+  //     const fileRef = ref(storage, `files/${email}/${mFile.name}`);
+  //     uploadBytes(fileRef, mFile)
+  //       .then(() => {
+  //         getDownloadURL(ref(storage, `files/${email}/${mFile.name}`))
+  //           .then(url => {
+  //             downloads.push(url);
+  //           })
+  //           .catch(err => console.log(err.message))
+  //         console.log('Uploaded!');
+  //       })
+  //       .catch((err) => console.log(err.message));
+  //   });
+  //   console.log('Bam', downloads);
+  //   setMaketUrl(downloads);
+  //   // const downloads = await getDownloadURL(
+  //   //   ref(storage, `files/${email}/${mFile.name}`)
+  //   // );
+  //   // console.log('D', downloads);
+  //   // return downloads;
+  // };
+  
+  const handleSubmit = async(event) => {
     event.preventDefault();
 
     if (maketFiles) {
-      uploadFiles();
+      await uploadFiles();
     }
 
     const emailParams = {
@@ -59,7 +94,8 @@ const OrderForm = (props) => {
       order_details: orderDetails,
       no_pvm: noPvm ? 'taip' : 'ne',
       free_maket: freeMaket ? 'reikia' : 'nereikia',
-    };
+      maket_file: downloads
+    }; 
 
     emailjs
       .send(
