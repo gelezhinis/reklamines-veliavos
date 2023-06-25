@@ -94,7 +94,8 @@ const OrderForm = (props) => {
       order_details: orderDetails,
       no_pvm: noPvm ? 'taip' : 'ne',
       free_maket: freeMaket ? 'reikia' : 'nereikia',
-      maket_file: downloads
+      // maket_file: downloads
+      maket_file: `<a href="${downloads[0]}">Linkas</a>`
     }; 
 
     emailjs
@@ -129,6 +130,8 @@ const OrderForm = (props) => {
       }, 5000);
     }
   };
+
+  const fileUrl = `${process.env.PUBLIC_URL}/example.pdf`;
 
   return (
     <div className={classes.order}>
@@ -247,6 +250,7 @@ const OrderForm = (props) => {
                 required
                 onChange={fileSelectHandler}
               />
+              <a href={fileUrl} download>Parsisiųsti pavyzdį</a>
             </div>
           )}
           <div>

@@ -11,6 +11,7 @@ import PricePage from './pages/PricePage';
 import OrderPage from './pages/OrderPage';
 import ContactPage from './pages/ContactPage';
 import GalleryPage from './pages/GalleryPage';
+import NotFoundPage from './pages/NotFoundPage';
 // import Background from './components/UI/Background';
 
 
@@ -27,6 +28,7 @@ function App() {
       <Route path="/price" component={PricePage} />
       <Route path="/contact" component={ContactPage} />
       <Route path="/gallery" component={GalleryPage} />
+      <Route component={NotFoundPage} />
     </Switch>
     {/* <Background /> */}
     <Footer />
