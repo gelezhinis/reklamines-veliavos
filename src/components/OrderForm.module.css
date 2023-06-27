@@ -112,25 +112,6 @@
   transition: all 0.35s ease-in;
 }
 
-.file a {
-  text-decoration: none;
-  color: black;
-  font-size: 0.9rem;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  border: 1px solid black;
-  border-radius: 5px;
-  background-color: #fff;
-}
-
-.file a:hover {
-  color: #fff;
-  border-color: var(--secondary);
-  background-color: var(--secondary);
-  transition: all 0.35s ease-in;
-}
-
 .order button {
   margin: 2rem auto;
 }

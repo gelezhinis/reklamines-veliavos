@@ -131,8 +131,6 @@ const OrderForm = (props) => {
     }
   };
 
-  const fileUrl = `${process.env.PUBLIC_URL}/example.pdf`;
-
   return (
     <div className={classes.order}>
       <p className={classes.order_desc}>
@@ -250,7 +248,6 @@ const OrderForm = (props) => {
                 required
                 onChange={fileSelectHandler}
               />
-              <a href={fileUrl} download>Parsisiųsti pavyzdį</a>
             </div>
           )}
           <div>
