@@ -36,28 +36,28 @@
 .button {
   text-decoration: none;
   color: black;
-  font-size: 0.94rem;
+  font-size: clamp(0.4rem, 2vw, 1.15rem);
   display: flex;
   align-items: center;
   text-align: center;
   border: 2px solid var(--secondary);
   border-radius: 0 25px 0 0;
   background-color: #fff;
-  width: 100px;
+  width: 22%;
   padding: 4px;
 }
 
 .animate_btn {
   text-decoration: none;
   color: black;
-  font-size: 0.94rem;
+  font-size: clamp(0.24rem, 2vw, 0.94rem);
   display: flex;
   align-items: center;
   text-align: center;
   border: 2px solid var(--secondary);
   border-radius: 0 25px 0 0;
   background-color: #fff;
-  width: 100px;
+  width: 22%;
   padding: 4px;
   animation-duration: 3s;
   animation-name: slide;
@@ -75,9 +75,10 @@
 
 
 .img_container a:hover {
-  color: #fff;
+  /* color: #fff; */
+  color: var(--secondary);
   /* background-color: #eb538d; */
-  background-color: #bbb8b8;
+  background-color: #f5e3e9;
   transition: all 0.35s ease-in;
 }
 
@@ -124,6 +125,18 @@
 .foundation img {
   width: 100%;
   object-fit: contain;
+}
+
+@media screen and (max-width: 645px) {
+  .img_container img {
+    margin-bottom: -2.2rem;
+  }
+}
+
+@media screen and (max-width: 484px) {
+  .img_container img {
+    margin-bottom: -1.5rem;
+  }
 }
 
 @media screen and (max-width: 414px) {
