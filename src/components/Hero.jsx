@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faTruckFast, faThumbsUp, faEuroSign, faRepublican} from "@fortawesome/free-solid-svg-icons";
+import {faTruckFast, faThumbsUp, faEuroSign, faRepublican, faHandHoldingHand} from "@fortawesome/free-solid-svg-icons";
 import {EmblaCarousel} from './UI/EmblaCarousel';
 
 import Modal from './UI/Modal';
@@ -49,7 +49,7 @@ const Hero = () => {
             <div className={classes.summary_column}>
               <div className={classes.icon_container}>
               {/* <FontAwesomeIcon icon={faRectanglePro} /> */}
-              <FontAwesomeIcon icon={faRepublican} />
+              <FontAwesomeIcon icon={faHandHoldingHand} />
               </div>
               <p>
               Profesionali konsultacija ir patarimai

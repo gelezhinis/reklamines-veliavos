@@ -5,6 +5,7 @@ import {
   FaPhone,
   FaEnvelope,
   FaMapMarkedAlt,
+  FaBriefcase
 } from 'react-icons/fa';
 
 import classes from './Contact.module.css';
@@ -18,8 +19,8 @@ const Contact = () => {
         <div className={classes.contact_left}>
           <h2 className={classes.contact_title}>Susisiekite su mumis.</h2>
           <div className={classes.contact_info_item}>
-            <FaAddressBook />
-            <h5>Karolis Balčiūnas</h5>
+            <FaBriefcase />
+            <h5>IĮ "Balčiuda"</h5>
           </div>
           <div className={classes.contact_info_item}>
             <FaPhone />
@@ -29,10 +30,10 @@ const Contact = () => {
             <FaEnvelope />
             <h5>info@reklaminiai.com</h5>
           </div>
-          <div className={classes.contact_info_item}>
+          {/* <div className={classes.contact_info_item}>
             <FaMapMarkedAlt />
             <h5>Lelijų g. 26, 62411 Alytus</h5>
-          </div>
+          </div> */}
         </div>
         <div className={classes.contact_right}>
           <ContactForm full />
