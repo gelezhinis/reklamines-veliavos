@@ -5,6 +5,7 @@ import classes from './Modal.module.css';
 const Modal = ({component}) => {
   useEffect(() => {
     window.scroll(0, 0);
+    //fixed
   },[]);
 
   return (
