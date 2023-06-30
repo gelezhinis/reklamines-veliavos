@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faTruckFast, faThumbsUp, faEuroSign, faRepublican, faHandHoldingHand} from "@fortawesome/free-solid-svg-icons";
+import {faTruckFast, faThumbsUp, faEuroSign, faHandHoldingHand} from "@fortawesome/free-solid-svg-icons";
 import {EmblaCarousel} from './UI/EmblaCarousel';
 
 import Modal from './UI/Modal';

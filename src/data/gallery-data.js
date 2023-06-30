@@ -62,7 +62,7 @@ export const GALLERY_IMAGES = [
   {
     id: 13,
     image: require('../img/gallery_imgs/L_Convex_420cm2.jpg'),
-    desc: 'M Convex 310cm'
+    desc: 'L Convex 420cm'
   },
   {
     id: 14,

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { storage } from '../firebase/firebaseConfig';
+import { storage } from '../firebase/firebase.config.js';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
 import Button from './UI/Button';
@@ -49,7 +49,6 @@ const OrderForm = (props) => {
         console.log('Upload error:', err.message);
       }
     }
-    // console.log('Downloads:', downloads);
   };
 
   // const uploadFiles = async () => {
@@ -95,7 +94,7 @@ const OrderForm = (props) => {
       no_pvm: noPvm ? 'taip' : 'ne',
       free_maket: freeMaket ? 'reikia' : 'nereikia',
       // maket_file: downloads
-      maket_file: `<a href="${downloads[0]}">Linkas</a>`
+      maket_file: downloads
     }; 
 
     emailjs
@@ -127,7 +126,7 @@ const OrderForm = (props) => {
       window.scroll(0, 100);
       setTimeout(() => {
         props.closeModal();
-      }, 5000);
+      }, 2500);
     }
   };
 

@@ -1,10 +1,8 @@
 import React from 'react';
 
 import {
-  FaAddressBook,
   FaPhone,
   FaEnvelope,
-  FaMapMarkedAlt,
   FaBriefcase
 } from 'react-icons/fa';
 
