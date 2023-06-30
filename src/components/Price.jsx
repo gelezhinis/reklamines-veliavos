@@ -44,7 +44,7 @@ const Price = () => {
       <div className={classes.price_hero_container}>
         <div className={classes.price_desc_container}>
           <div className={classes.price_desc}>
-            <h1>Reklaminių Vėliavų Kainos!!!</h1>
+            <h1>Reklaminių Vėliavų Kainos</h1>
             <p>
               Reklaminių vėliavų kaina priklauso nuo užsakomo kiekio bei vėliavų
               dydžio. Kuo didesnis kiekis - tuo geresnė kaina. Į vėliavos kainą
