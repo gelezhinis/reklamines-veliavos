@@ -67,7 +67,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className={classes.instagram}
               >
-                <FaInstagram size={19} />myprint.lt
+                <FaInstagram size={17} /><span>myprint.lt</span>
               </a>
             </li>
           </ul>
