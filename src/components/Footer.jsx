@@ -57,7 +57,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <FaFacebook />/reklaminesveliavos
+                <FaFacebook />reklaminesveliavos
               </a>
             </li>
             <li>
@@ -67,7 +67,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className={classes.instagram}
               >
-                <FaInstagram size={19} />/myprint.lt
+                <FaInstagram size={19} />myprint.lt
               </a>
             </li>
           </ul>
