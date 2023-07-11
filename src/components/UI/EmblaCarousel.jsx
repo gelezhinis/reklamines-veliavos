@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
-import LazyLoad from 'react-lazyload';
+import LazyLoad from 'react-lazy-load';
 
 import flag1 from '../../img/flags/flag1.jpg';
 import flag2 from '../../img/flags/flag2.jpg';

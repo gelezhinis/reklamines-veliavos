@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-import LazyLoad from 'react-lazyload';
+import LazyLoad from 'react-lazy-load';
 
 import {FaFacebook, FaInstagram} from 'react-icons/fa';
 
