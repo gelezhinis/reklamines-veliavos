@@ -7,7 +7,7 @@
 }
 
 html {
-  background: url('./img/bg.jpg') no-repeat center center fixed; 
+  background: url('./img/bg.webp') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -23,29 +23,7 @@ body {
     sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-image: url('./img/symbol-clear-black-abstract-wind.jpg');
-  background-repeat: no-repeat;
-  background-size: cover; */
 }
 
-/* body div {
-  background: url('./img/bg.jpg') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-} */
-
-/* #root {
-  height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  perspective: 10px;
-} */
-
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
 
 
