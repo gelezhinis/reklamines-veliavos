@@ -16,10 +16,6 @@ const Contact = () => {
       <div className={classes.contact}>
         <div className={classes.contact_left}>
           <h2 className={classes.contact_title}>Susisiekite su mumis.</h2>
-          {/* <div className={classes.contact_info_item}>
-            <FaBriefcase />
-            <h5>IĮ "Balčiuda"</h5>
-          </div> */}
           <div className={classes.contact_info_item}>
             <FaEnvelope />
             <h5>info@reklaminiai.lt</h5>

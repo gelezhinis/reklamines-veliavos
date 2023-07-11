@@ -1,5 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+import LazyLoad from 'react-lazyload';
 
 import {FaFacebook, FaInstagram} from 'react-icons/fa';
 
@@ -10,7 +11,7 @@ const NavBar = () => {
   return (
     <div className={classes.nav}>
       <div className={classes.nav_wrap}>
-        <div><NavLink to="/"><img src={logo} width={220} alt="logo" /></NavLink></div>
+        <div><NavLink to="/"><LazyLoad offset={50}><img src={logo} width={220} alt="logo" /></LazyLoad></NavLink></div>
         <ul className={classes.nav_list}>
           <li>
             <NavLink to="/price" activeClassName={classes.active}>Kainos</NavLink>

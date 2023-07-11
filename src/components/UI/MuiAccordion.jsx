@@ -15,7 +15,7 @@ import Card from '../UI/Card';
 import classes from './MuiAccordion.module.css';
 
 const MuiAccordion = () => {
-  const [expanded, setExpanded] = useState('panel1');
+  const [expanded, setExpanded] = useState('panel2');
 
   const { ref: ref1, inView: firstCardView } = useInView();
   const { ref: ref2, inView: secondCardView } = useInView();

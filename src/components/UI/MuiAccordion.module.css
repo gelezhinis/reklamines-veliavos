@@ -59,7 +59,7 @@
   background-color: #fff;
   width: 22%;
   padding: 4px;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-name: slide;
   transform: translateY(-80%);
 }

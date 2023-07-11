@@ -3,6 +3,10 @@
   margin: 1rem auto;
 }
 
+.contact_title {
+  margin-bottom: 2rem;
+}
+
 .contact_left {
   flex: 1;
 }
