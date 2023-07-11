@@ -27,7 +27,7 @@ const NavBar = () => {
           </li>
         </ul>
         <div className={classes.social_list}>
-          <a href="https://www.facebook.com/reklaminesveliavos" target="_blank" rel="noreferrer noopener"><FaFacebook size={25} /></a>
+          <a href="https://www.facebook.com/reklaminesveliavos" target="_blank" rel="noopener noreferrer"><FaFacebook size={25} /></a>
           <a href="https://www.instagram.com/myprint.lt" target="_blank" rel="noopener noreferrer"><FaInstagram size={25} /></a>
         </div>
       </div>
