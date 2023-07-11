@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
-import LazyLoad from 'react-lazy-load';
+// import LazyLoad from 'react-lazy-load';
 
 import flag1 from '../../img/flags/flag1.jpg';
 import flag2 from '../../img/flags/flag2.jpg';
@@ -20,7 +20,7 @@ export const EmblaCarousel = () => {
     if (emblaRef.current) {
       autoplay.init(emblaRef.current);
     }
-  }, []);
+  });
 
   const [emblaRefInstance] = useEmblaCarousel({ loop: true }, [autoplay]);
 
@@ -28,39 +28,39 @@ export const EmblaCarousel = () => {
     <div className={classes.embla} ref={emblaRefInstance}>
       <div className={classes.embla__container}>
         <div className={classes.embla__slide}>
-          <LazyLoad offset={100}>
+          {/* <LazyLoad offset={100}> */}
             <img src={flag1} alt="flag1" />
-          </LazyLoad>
+          {/* </LazyLoad> */}
         </div>
         <div className={classes.embla__slide}>
-          <LazyLoad offset={100}>
+          {/* <LazyLoad offset={100}> */}
             <img src={flag2} alt="flag2" />
-          </LazyLoad>
+          {/* </LazyLoad> */}
         </div>
         <div className={classes.embla__slide}>
-          <LazyLoad offset={100}>
+          {/* <LazyLoad offset={100}> */}
             <img src={flag3} alt="flag3" />
-          </LazyLoad>
+          {/* </LazyLoad> */}
         </div>
         <div className={classes.embla__slide}>
-          <LazyLoad offset={100}>
+          {/* <LazyLoad offset={100}> */}
             <img src={flag4} alt="flag4" />
-          </LazyLoad>
+          {/* </LazyLoad> */}
         </div>
         <div className={classes.embla__slide}>
-          <LazyLoad offset={100}>
+          {/* <LazyLoad offset={100}> */}
             <img src={flag5} alt="flag5" />
-          </LazyLoad>
+          {/* </LazyLoad> */}
         </div>
         <div className={classes.embla__slide}>
-          <LazyLoad offset={100}>
+          {/* <LazyLoad offset={100}> */}
             <img src={flag6} alt="flag6" />
-          </LazyLoad>
+          {/* </LazyLoad> */}
         </div>
         <div className={classes.embla__slide}>
-          <LazyLoad offset={100}>
+          {/* <LazyLoad offset={100}> */}
             <img src={flag7} alt="flag7" />
-          </LazyLoad>
+          {/* </LazyLoad> */}
         </div>
       </div>
     </div>
