@@ -22,10 +22,10 @@ function App() {
     {ctx.isMobileDevice ? <MobileNavBar /> : <NavBar />}
     <Switch>
       <Route path="/" exact  component={HomePage} />
-      <Route path="/order" component={OrderPage} />
-      <Route path="/price" component={PricePage} />
-      <Route path="/contact" component={ContactPage} />
-      <Route path="/gallery" component={GalleryPage} />
+      <Route path="/uzsakymai" component={OrderPage} />
+      <Route path="/kainos" component={PricePage} />
+      <Route path="/kontaktai" component={ContactPage} />
+      <Route path="/galerija" component={GalleryPage} />
       <Route component={NotFoundPage} />
     </Switch>
     <Footer />

@@ -20,22 +20,22 @@ const NavBar = () => {
         </div>
         <ul className={classes.nav_list}>
           <li>
-            <NavLink to="/price" activeClassName={classes.active}>
+            <NavLink to="/kainos" activeClassName={classes.active}>
               Kainos
             </NavLink>
           </li>
           <li>
-            <NavLink to="/gallery" activeClassName={classes.active}>
+            <NavLink to="/galerija" activeClassName={classes.active}>
               Galerija
             </NavLink>
           </li>
           <li>
-            <NavLink to="/contact" activeClassName={classes.active}>
+            <NavLink to="/kontaktai" activeClassName={classes.active}>
               Kontaktai
             </NavLink>
           </li>
           <li>
-            <NavLink to="/order" activeClassName={classes.active}>
+            <NavLink to="/uzsakymai" activeClassName={classes.active}>
               Užsakyti
             </NavLink>
           </li>
