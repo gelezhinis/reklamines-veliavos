@@ -37,7 +37,7 @@ const Hero = () => {
           <p>
           Tai vėliavos kurios puikiai tinka įvairaus verslo, prekės ženklo ar bet kokio renginio reklamai. Reklaminės vėliavos gali būti naudojamos ne tik lauke įvairiais metų laikais, bet ir viduje, o lyginant su kitomis reklamos formomis jos turi nemažai privalumų, todėl yra populiarus pasirinkimas.
           Didžiuojamės, kad mūsų gaminamos Reklaminės vėliavos džiugina ne tik Lietuvos, bet ir kitų europos valstybių klientus.
-          Reklaminių vėliavų gamyboje turime sukaupę ne tik didelę patirtį, bet ir nemažą klientų bei partnerių ratą, o dėka viso to galime pasiūlyti ne tik GERĄ kokybę bet ir draukišką KAINĄ.
+          Reklaminių vėliavų gamyboje turime sukaupę ne tik didelę patirtį, bet ir nemažą klientų bei partnerių ratą, o dėka viso to galime pasiūlyti ne tik GERĄ kokybę bet ir draugišką KAINĄ.
           </p>
           <Button title="Siųsti užklausą" onClick={modalHandler} />
         </div>

@@ -117,6 +117,7 @@ const Price = () => {
           </div>
         </div>
         <div className={classes.info}>
+          <p>Kainos be PVM</p>
           <p>
             Standartinį vėliavos komplektą sudaro iš kelių dalių surenkamas
             aliuminio bei stiklo pluošto stiebas ir vėliava su vienpuse spalvota
