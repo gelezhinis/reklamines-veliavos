@@ -135,7 +135,7 @@ const Price = () => {
             *NEMOKAMAS užsakymo pristatymas Lietuvos didžiuosiuose miestuose
             vienu adresu. Užsakant ne mažiau 2-jų vėliavų kompletus su
             pagrindais. Užsakant vėliavas be pagrindų ar atskirai tik pagrindus,
-            pristatymas kainuoja papildomai.
+            pristatymas kainuos papildomai.
           </p>
         </div>
       </Card>
