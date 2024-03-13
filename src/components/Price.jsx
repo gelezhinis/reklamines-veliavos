@@ -127,7 +127,7 @@ const Price = () => {
             su sukikliu.
           </p>
           <p>
-            *Nesudėtingus maketus paruošiame NEMOKAMAI jeigu pateikiami tinkamo
+            *Nesudėtingus maketus paruošiame NEMOKAMAI, jeigu pateikiami tinkamo
             formato failai/logo. Paruošiamas 1-2 variantai ir atliekamos 1-2
             korekcijos.
           </p>
