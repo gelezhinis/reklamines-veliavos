@@ -23,7 +23,7 @@ const Price = () => {
   const { ref: ref2, inView: secondCardView } = useInView();
   const { ref: ref3, inView: thirdCardView } = useInView();
   const { ref: ref4, inView: fourthCardView } = useInView();
-  const { ref: ref5, inView: foundCardView } = useInView();
+  // const { ref: ref5, inView: foundCardView } = useInView();
 
   const modalHandler = () => {
     setModal(true);
@@ -107,12 +107,13 @@ const Price = () => {
           </div>
           <div className={classes.found_container}>
             <img
-              ref={ref5}
+              // ref={ref5}
               src={priceFoundation}
               alt="foundation_card"
-              className={`${classes.img_card} ${
-                foundCardView ? classes.animate_card_grow : ''
-              }`}
+              // className={`${classes.img_card} ${
+              //   foundCardView ? classes.animate_card_grow : ''
+              // }`}
+              className={classes.img_card}
             />
           </div>
         </div>

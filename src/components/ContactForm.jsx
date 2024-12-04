@@ -14,6 +14,7 @@ const ContactForm = (props) => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
+
   const handleSubmit = (event) => {
     event.preventDefault();
 

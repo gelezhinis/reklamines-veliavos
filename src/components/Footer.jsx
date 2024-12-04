@@ -17,7 +17,7 @@ const Footer = () => {
       <div className={classes.footer}>
         <div className={classes.footer_item}>
           <div><img src={logo} width={150} alt="logo" /></div>
-          <p>Created by Reactive Solutions</p>
+          <p className={classes.created}>Created by <a href="https://www.reactivesolutions.lt" target="_blank" rel="noreferrer">Reactive Solutions</a></p>
           <p>Copyright &copy; 2023. All Rights Reserved</p>
         </div>
         <div className={classes.footer_item}>

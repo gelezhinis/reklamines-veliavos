@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {Switch, Route} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 
 import { Context } from './store/context';
 
@@ -20,14 +20,14 @@ function App() {
   return (
     <>
     {ctx.isMobileDevice ? <MobileNavBar /> : <NavBar />}
-    <Switch>
-      <Route path="/" exact  component={HomePage} />
-      <Route path="/uzsakymai" component={OrderPage} />
-      <Route path="/kainos" component={PricePage} />
-      <Route path="/kontaktai" component={ContactPage} />
-      <Route path="/galerija" component={GalleryPage} />
-      <Route component={NotFoundPage} />
-    </Switch>
+    <Routes>
+      <Route path="/" exact  element={<HomePage />} />
+      <Route path="/uzsakymai" element={<OrderPage />} />
+      <Route path="/kainos" element={<PricePage />} />
+      <Route path="/kontaktai" element={<ContactPage />} />
+      <Route path="/galerija" element={<GalleryPage />} />
+      <Route element={<NotFoundPage />} />
+    </Routes>
     <Footer />
     </>
   );

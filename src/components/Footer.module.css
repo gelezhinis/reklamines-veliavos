@@ -59,6 +59,10 @@
   gap: 0.6rem;
 }
 
+.footer_item a:hover {
+  color: #ddd;
+}
+
 /* @media screen and (max-width: 922px) {
   .footer_item:nth-child(2) p {
     margin-left: 2.5rem;

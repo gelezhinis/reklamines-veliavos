@@ -43,7 +43,7 @@
   border: 2px solid var(--secondary);
   border-radius: 0 25px 0 0;
   background-color: #fff;
-  width: 22%;
+  width: 19%;
   padding: 4px;
 }
 
@@ -57,7 +57,7 @@
   border: 2px solid var(--secondary);
   border-radius: 0 25px 0 0;
   background-color: #fff;
-  width: 22%;
+  width: 19%;
   padding: 4px;
   animation-duration: 2s;
   animation-name: slide;

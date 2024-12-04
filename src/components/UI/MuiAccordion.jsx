@@ -21,7 +21,7 @@ const MuiAccordion = () => {
   const { ref: ref2, inView: secondCardView } = useInView();
   const { ref: ref3, inView: thirdCardView } = useInView();
   const { ref: ref4, inView: fourthCardView } = useInView();
-  const { ref: ref5, inView: foundCardView } = useInView();
+  // const { ref: ref5, inView: foundCardView } = useInView();
 
   const handleChange = (isExpanded, panel) => {
     setExpanded(isExpanded ? panel : false);
@@ -74,7 +74,7 @@ const MuiAccordion = () => {
                   href={exampleFileS}
                   download
                 >
-                  Parsisiųsk šabloną
+                  Siųstis šabloną
                 </a>
               </div>
             </AccordionDetails>
@@ -108,7 +108,7 @@ const MuiAccordion = () => {
                   href={exampleFileM}
                   download
                 >
-                  Parsisiųsk šabloną
+                  Siųstis šabloną
                 </a>
               </div>
             </AccordionDetails>
@@ -140,7 +140,7 @@ const MuiAccordion = () => {
                   thirdCardView ? classes.animate_btn : ''
                 }`}
                 href={exampleFileL} download>
-                  Parsisiųsk šabloną
+                  Siųstis šabloną
                 </a>
               </div>
             </AccordionDetails>
@@ -174,7 +174,7 @@ const MuiAccordion = () => {
                   href={exampleFileXL}
                   download
                 >
-                  Parsisiųsk šabloną
+                  Siųstis šabloną
                 </a>
               </div>
             </AccordionDetails>
@@ -192,10 +192,11 @@ const MuiAccordion = () => {
           <img
             src={found}
             alt="foundation"
-            ref={ref5}
-            className={`${classes.img_card} ${
-              foundCardView ? classes.animate_found_card : ''
-            }`}
+            // ref={ref5}
+            // className={`${classes.img_card} ${
+            //   foundCardView ? classes.animate_found_card : ''
+            // }`}
+            className={classes.img_card}
           />
         </div>
       </Card>
