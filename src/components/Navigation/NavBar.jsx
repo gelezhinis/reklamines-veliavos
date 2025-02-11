@@ -44,7 +44,8 @@ const NavBar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/uzsakymai" activeClassName={classes.active}>
+            <NavLink to="/uzsakymai" activeClassName={classes.active}> 
+            {/* neveikias */}
               Užsakyti
             </NavLink>
           </li>
