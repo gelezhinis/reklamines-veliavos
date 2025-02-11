@@ -12,11 +12,20 @@ jobs:
   
     steps: 
       - uses: actions/checkout@v3
+
+      - name: Create .env file
+        run: |
+          echo "REACT_APP_SERVICE_ID=service_6yot61z" >> .env
+          echo "REACT_APP_TEMPLATE_ID=template_ipodwef" >> .env
+          echo "REACT_APP_USER_ID=user_SQuNzUKyVdTacaDdvFSWD" >> .env
+
       - name: Use Node.js ${{matrix.node-version}}
         uses: actions/setup-node@v3
         with:
           node-version: ${{matrix.node-version}}
       - run: 
+          npm install
+          npm audit fix
           npm run build 
 
 

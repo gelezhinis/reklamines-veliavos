@@ -1,11 +1,11 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
 // import LazyLoad from 'react-lazy-load';
 
-import { FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
-import logo from '../../img/logo/logo_n.png';
-import classes from './NavBar.module.css';
+import logo from "../../img/logo/logo_n.png";
+import classes from "./NavBar.module.css";
 
 const NavBar = () => {
   return (
@@ -14,23 +14,32 @@ const NavBar = () => {
         <div>
           <NavLink to="/">
             {/* <LazyLoad offset={50}> */}
-              <img src={logo} width={220} alt="logo" />
+            <img src={logo} width={220} alt="logo" />
             {/* </LazyLoad> */}
           </NavLink>
         </div>
         <ul className={classes.nav_list}>
           <li>
-            <NavLink to="/kainos" activeClassName={classes.active}>
+            <NavLink
+              to="/kainos"
+              className={({ isActive }) => (isActive ? classes.active : "")}
+            >
               Kainos
             </NavLink>
           </li>
           <li>
-            <NavLink to="/galerija" activeClassName={classes.active}>
+            <NavLink
+              to="/galerija"
+              className={({ isActive }) => (isActive ? classes.active : "")}
+            >
               Galerija
             </NavLink>
           </li>
           <li>
-            <NavLink to="/kontaktai" activeClassName={classes.active}>
+            <NavLink
+              to="/kontaktai"
+              className={({ isActive }) => (isActive ? classes.active : "")}
+            >
               Kontaktai
             </NavLink>
           </li>
