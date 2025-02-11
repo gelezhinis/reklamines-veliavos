@@ -13,9 +13,9 @@ jobs:
 
   
     steps: 
-      - name: Set permissions for build/static/css
-        run: sudo chmod -R 777 /var/www/reklamines-veliavos/_work/reklamines-veliavos/reklamines-veliavos/build/static/css
       - uses: actions/checkout@v3
+        with:
+          clean: true
 
       - name: Create .env file
         run: |
